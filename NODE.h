@@ -34,14 +34,13 @@ public:
 		node<T>* tmp;
 		for (tmp = head; tmp != nullptr; tmp = tmp->next)
 		{
-			if (tmp->data == item)
+			if (tmp->data.compare(item)==0)
 			{
 				return true;
 			}
-			else {
-				return false;
-			}
+			
 		}
+		return false;
 	};
 	bool isEmpty() {
 		return size == 0;
